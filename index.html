@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <a href="#" class="page-logo">
+        <img src="./images/logo.svg" alt="Splitter">
+      </a>
+    </header>
+    <section class="page-content">
+      <form id="page-form">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="tip-fields">
+              <div class="form-group">
+                <label>Bill</label>
+                <div class="input-group">
+                  <img class="field-icon" src="./images/icon-dollar.svg" alt="Dollar">
+                  <input id="bill" type="number" name="bill" class="form-field bill-field" step="0.05" pattern="([0-9]{1,3}).([0-9]{1,3})" min="0" placeholder="0">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="mb-16">Select Tip %</label>
+                <div class="row">
+                  <div class="col-6 col-lg-4 choice-wrapper">
+                    <label class="choice" for="tip-5">5%<input id="tip-5" type="radio" name="tip" value="5"></label>
+                  </div>
+                  <div class="col-6 col-lg-4 choice-wrapper">
+                    <label class="choice" for="tip-10">10%<input id="tip-10" type="radio" name="tip" value="10"></label>
+                  </div>
+                  <div class="col-6 col-lg-4 choice-wrapper">
+                    <label class="choice" for="tip-15">15%<input id="tip-15" type="radio" name="tip" value="15"></label>
+                  </div>
+                  <div class="col-6 col-lg-4 choice-wrapper">
+                    <label class="choice" for="tip-25">25%<input id="tip-25" type="radio" name="tip" value="25"></label>
+                  </div>
+                  <div class="col-6 col-lg-4 choice-wrapper">
+                    <label class="choice" for="tip-50">50%<input id="tip-50" type="radio" name="tip" value="50"></label>
+                  </div>
+                  <div class="col-6 col-lg-4 choice-wrapper">
+                    <input type="number" name="custom-tip" class="custom-tip" placeholder="Custom" pattern="([0-9]{1,3})" min="5" step="5">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Number of People</label>
+                <div class="input-group">
+                  <img class="field-icon" src="./images/icon-person.svg" alt="Clients">
+                  <input id="clients" type="number" name="clients" class="form-field clients-field" step="1" pattern="([0-9]{1,3})" min="1" placeholder="0">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="resultbox row">
+              <div class="col-12 result-element">
+                <div class="row">
+                  <div class="col-6 col-lg-4">
+                    <span class="result-label">Tip Amount<br><small class="text-gray">/ person</small></span>
+                  </div>
+                  <div class="col-6 col-lg-8 text-right">
+                    <span class="result-value">
+                      &dollar;<span id="tipVal">0.00</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 result-element">
+                <div class="row">
+                  <div class="col-6 col-lg-4">
+                    <span class="result-label">Total<br><small class="text-gray">/ person</small></span>
+                  </div>
+                  <div class="col-6 col-lg-8 text-right">
+                    <span class="result-value">
+                      &dollar;<span id="totalVal">0.00</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 result-footer">
+                <input type="reset" class="btn btn-reset" value="Reset">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--java: #26c0ab;
+	--sherpa: #00494d;
+	--sark: #5e7a7d;
+	--smith: #7f9c9f;
+	--ice: #c5e4e7;
+	--catskill: #f4fafa;
+	--white:  #ffffff;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Space Mono', monospace;
+	font-weight: 700;
+}
+
+body {
+	background-color: var(--ice);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+small {
+	font-size: 0.8125rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+label {
+	margin: 0 0 0.5em;
+	display: block;
+}
+
+input {
+	font-family: inherit;
+	font-size: 1.5em;
+	line-height: 1;
+	padding: 0.1875rem 0.9375rem;
+	color: var(--sherpa);
+	border-radius: 0.25em;
+	border: 3px solid var(--catskill);
+	background-color: var(--catskill);
+	text-align: right;
+	max-width: 100%;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 0;
+	height: 0;
+	padding: 0;
+	border: none;
+}
+
+input[type="number"] {
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+input[type="reset"] {
+	-webkit-appearance: textfield;
+	appearance: textfield;
+	cursor: pointer;
+}
+
+.btn {
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	border-color: var(--java);
+	text-transform: uppercase;
+	letter-spacing: -0.1875rem;
+	padding: 0.5625rem 1rem;
+	background-color: var(--java);
+}
+
+.btn:hover, .btn:focus {
+	outline: none;
+	border-color: var(--sark);
+	background-color: var(--sark);
+}
+
+.form-field {
+	width: 100%;
+}
+
+.form-group {
+	margin-top: 2.0625em;
+}
+
+.form-group:first-child {
+	margin-top: 0;
+}
+
+.input-group {
+	position: relative;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-gray {
+	color: var(--sark);
+}
+
+.bill-field, .clients-field {
+	padding: 0.0625rem 0.625em 0.0625rem 1.875em;
+}
+
+.field-icon {
+	position: absolute;
+	top: 0.875rem;
+	left: 1.1875rem;
+}
+
+.choice {
+	color: var(--white);
+	cursor: pointer;
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 0;
+	padding: 0.25em 0.25em;
+	border-radius: 0.5rem;
+	letter-spacing: -0.15rem;
+	background-color: var(--sherpa);
+}
+
+.choice-wrapper:nth-child(6n+1),
+.choice-wrapper:nth-child(6n+2),
+.choice-wrapper:nth-child(6n+3),
+.choice-wrapper:nth-child(6n+4) {
+	margin-bottom: 1rem;
+}
+
+.choice.selected {
+	color: var(--sherpa);
+	background-color: var(--java);
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -0.5em;
+}
+
+.col-12, .col-lg-6 {
+	flex: 0 0 100%;
+	max-width: 100%;
+	padding: 0 0.5em;
+}
+
+.col-6 {
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 0.5em;
+}
+
+.mb-16 {
+	margin-bottom: 1rem;
+}
+
+.tip-row {
+	margin-top: 1rem;
+}
+
+.page {
+	background-color: var(--ice);
+}
+
+.page-header {
+	padding: 3.125em 0 2.5em;
+}
+
+.page-logo {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.page-content {
+	padding: 2em 2em;
+	border-radius: 1.5em;
+	background-color: var(--white);
+}
+
+.tip-fields {
+	margin-bottom: 2.1875rem;
+}
+
+.resultbox {
+	color: var(--white);
+	padding: 2.375rem 1rem 1.5rem;
+	border-radius: 1em;
+	background-color: var(--sherpa);
+}
+
+.result-element {
+	margin-bottom: 1.25rem;
+}
+
+.result-value {
+	display: block;
+	color: var(--java);
+	font-size: 1.875rem;
+}
+
+.result-footer {
+	margin-top: 0.625rem;
+}
+
+@media screen and (min-width: 75rem) {
+
+	.page {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+		max-width: 57.5rem;
+		margin: 10.125rem auto 0;
+	}
+
+	.page-header {
+		padding: 0 0 5.5rem;
+	}
+
+	.page-content {
+		padding: 2em 2em 2em 3em;
+	}
+
+	.col-lg-8 {
+		flex: 0 0 66.6667%;
+		max-width: 66.6667%;
+	}
+
+	.col-lg-7 {
+		flex: 0 0 58.3333%;
+		max-width: 58.3333%;
+	}
+
+	.col-lg-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.col-lg-5 {
+		flex: 0 0 41.6667%;
+		max-width: 41.6667%;
+	}
+
+	.col-lg-4 {
+		flex: 0 0 33.3333%;
+		max-width: 33.3333%;
+	}
+
+	.tip-fields {
+		padding-top: 0.75rem;
+		padding-right: 2rem;
+		margin-bottom: 0;
+	}
+
+	.form-group {
+		margin-top: 2.625rem;
+	}
+
+	.choice-wrapper:nth-child(6n+4) {
+		margin-bottom: 0;
+	}
+
+	.custom-tip {
+		border-radius: 0.5rem;
+		padding: 0.1875rem 0.6875rem;
+	}
+
+	.resultbox {
+		margin: 0;
+		padding: 3.5rem 2rem 2.5rem;
+	}
+
+	.result-element {
+		margin-bottom: 3rem;
+	}
+
+	.result-value {
+		font-size: 3rem;
+		line-height: 0.8;
+		letter-spacing: -0.075rem;
+	}
+
+	.result-footer {
+		margin-top: 5rem;
+	}
+
+	.btn-reset {
+		font-size: 1.25rem;
+		padding: 0.75rem 1.5rem;
+		letter-spacing: 0;
+	}
+}
